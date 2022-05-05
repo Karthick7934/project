@@ -15,7 +15,7 @@ namespace project
            StackExample s1 = new StackExample();
             s1.add();
             QUEUEExample q1 =new QUEUEExample();
-            q1.display();
+            q1.display();//Added comment
             
             
         }
