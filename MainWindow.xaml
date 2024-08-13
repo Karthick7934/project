@@ -1,0 +1,96 @@
+﻿<Window x:Class="Configure.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Configure"
+        mc:Ignorable="d"
+           Title ="Learning window">
+     <Grid VerticalAlignment="Top">
+        <StackPanel Orientation="Horizontal" Margin="10,30,0,0" Width="900">
+            <StackPanel Margin="10,0,0,0" Width="500" >
+                <Grid Margin="5"> 
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  Margin ="2,0,0,0" Width="100" Text="Controller:" TextAlignment="Right" FontWeight="Bold" FontSize ="14" Foreground="DarkBlue"></TextBlock>
+                        <ComboBox Margin=" 10,0,0,0" Height="20" Width="100">
+                            <ComboBoxItem Content="contoller 1"></ComboBoxItem>
+                            <ComboBoxItem Content="contoller 2"></ComboBoxItem>
+                            <ComboBoxItem Content="contoller 3"></ComboBoxItem>
+                        </ComboBox>
+                        <Button Margin="10,0,0,0" Height="20" Width="100" FontWeight="Bold" Content="Connect" BorderBrush="DarkBlue" BorderThickness="1" FontSize="12" Command="{Binding Fwupdate}"/>
+
+                    </StackPanel>
+                    <!--<TextBox  Margin ="10,0,0,0" Height="20" Width="127" BorderBrush="DarkBlue" BorderThickness="1" ></TextBox> -->
+                </Grid>
+                <Grid Margin="5">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock  Margin=" 2,0,0,0" Width="100" Text="Ipaddress :" TextAlignment="Right" FontWeight="Bold" FontSize ="14" Foreground="DarkBlue"/>
+                        <TextBox Margin ="10,0,0,0" Height="20" Width="100" BorderBrush="DarkBlue" BorderThickness="1" />
+                        <Button Margin="10,0,0,0" Height="20" Width="100" FontWeight="Bold" Content="Connect" BorderBrush="DarkBlue" BorderThickness="1" FontSize="12" Command="{Binding ContollerConnect}"/>
+                    </StackPanel>
+                </Grid>
+                <Grid Margin="5">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Margin="2,0,0,0" Width="100"  Text="Fw status:" TextAlignment="Right" FontWeight="Bold" FontSize="14" Foreground="DarkBlue"></TextBlock>
+                        <ComboBox Margin="10,0,0,0" Height="20" Width="120" >
+                            <ComboBoxItem Content="ControllerCard" ></ComboBoxItem>
+                            <ComboBoxItem Content="PPS" ></ComboBoxItem>
+                            <ComboBoxItem Content="E-load" ></ComboBoxItem>
+                            <ComboBoxItem Content="PD-Controller" ></ComboBoxItem>
+                            <ComboBoxItem Content="Connectivity Manager" ></ComboBoxItem>
+                            <ComboBoxItem Content="Testercard" ></ComboBoxItem>
+                            <ComboBoxItem Content="SSBL"></ComboBoxItem>
+                        </ComboBox>
+                        <Button Margin="10,0,0,0" Height="20" Width="80" FontWeight="Bold" Content="Update" BorderBrush="DarkBlue" BorderThickness="1" FontSize="12" Command="{Binding Fwupdate}"/>
+
+                    </StackPanel>
+
+                </Grid>
+
+                <Grid Margin="5">
+                    
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel>
+
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Margin="0,0,0,0" Width="100"  Text="Runtime ip :" TextAlignment="Right" FontWeight="Bold" FontSize="14" Foreground="DarkBlue"></TextBlock>
+                                <TextBox Margin ="10,0,0,0" Height="20" Width="100" BorderBrush="DarkBlue" BorderThickness="1" Text="{Binding TextboxRuntimeip}"/>
+                                <TextBox Margin ="10,0,0,0" Height="20" Width="100" BorderBrush="DarkBlue" BorderThickness="1" Text="{Binding TextBoxSubnetmask}"/>
+                            </StackPanel>
+
+                            <StackPanel Orientation="Horizontal" Margin="0,5,0,0">
+                                <TextBlock Margin="1,0,0,0" Width="100"  Text= " " TextAlignment="Right" FontWeight="Bold" FontSize="14" Foreground="DarkBlue"></TextBlock>
+                                <Button Margin="10,5,0,0" Height="20" Width="100" FontWeight="Bold" Content="Enable" BorderBrush="DarkBlue" BorderThickness="1" FontSize="12" Command="{Binding EnableCommand}"/>
+                                <Button  Margin ="10,5,0,0" Height="20" Width="100" FontWeight="Bold" Content="Disable" BorderBrush="DarkBlue" BorderThickness="1" FontSize="12" Command="{Binding EnableCommand}"/>
+
+                            </StackPanel>
+                            <!--StackPanel Orientation="Horizontal" Margin="10,10,0,0">
+                                <TextBlock Margin="1,0,0,0" Width="100"  Text= " " TextAlignment="Right" FontWeight="Bold" FontSize="14" Foreground="DarkBlue"></TextBlock>
+                                <DatePicker Height="25" HorizontalAlignment="Left" Margin="1,5,0,0" Name="Date" VerticalAlignment="Top" Width="115"/>
+                            </StackPanel>-->
+                                
+                        </StackPanel>
+
+                    </StackPanel>
+                    
+                </Grid>
+
+
+
+            </StackPanel>
+            <!-- Second grid-->
+            <Grid>
+                <StackPanel Margin="10">
+                    <StackPanel HorizontalAlignment="Left">
+                        
+                            <StackPanel Orientation="Horizontal">
+                                
+                            </StackPanel>
+                        </StackPanel>
+                    
+                </StackPanel>
+
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
